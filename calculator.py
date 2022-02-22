@@ -44,9 +44,9 @@ def calclulate_two_or_four(operation, first_num, second_num):
         print(f"Wynik to {round(first_num / second_num, 2)}")
 
 
-def calclulate_one_or_three(operation, numbs_list):
-    result = 0
+def calclulate_one_or_three(operation, numbs_list):    
     if operation == 1:
+        result = 0
         for number in numbs_list:
             result += number
         print("Dodaję", end=' ')
@@ -92,7 +92,7 @@ elif operation == 1 or operation == 3:
 #     first_num = float(input("Pierwsza liczba: "))
 #     second_num = float(input("Druga liczba: "))
 
-# print(num)
+
 
 
 # def calclulate(operation, first_num, second_num, numbs):
