@@ -13,25 +13,6 @@ except:
     print("Niepoprawny format")
     sys.exit(1)
 
-
-# Choose and check numbers
-if operation == 2 or operation == 4:
-    try:
-        first_num = float(input("Pierwsza liczba: "))
-        second_num = float(input("Druga liczba: "))
-    except:
-        print("Niepoprawny format")
-        sys.exit(1)
-
-elif operation == 1 or operation == 3:
-    try:
-        numbs_list = [float(numbs_list)
-                      for numbs_list in input("Wprowadź wartości: ").split()]
-    except:
-        print("Niepoprawny format")
-        sys.exit(1)
-
-
 # Define calculating functions
 
 def calclulate_two_or_four(operation, first_num, second_num):
@@ -63,11 +44,21 @@ def calclulate_one_or_three(operation, numbs_list):
             print(number, end=' ')
         print(f"\nWynik to {result}")
 
-
-# Calculate
+# Choose and check and calculate 
 if operation == 2 or operation == 4:
+    try:
+        first_num = float(input("Pierwsza liczba: "))
+        second_num = float(input("Druga liczba: "))
+    except:
+        print("Niepoprawny format")
+        sys.exit(1)
     calclulate_two_or_four(operation, first_num, second_num)
 
 elif operation == 1 or operation == 3:
+    try:
+        numbs_list = [float(numbs_list)
+                      for numbs_list in input("Wprowadź wartości: ").split()]
+    except:
+        print("Niepoprawny format")
+        sys.exit(1)
     calclulate_one_or_three(operation, numbs_list)
-
