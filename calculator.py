@@ -12,7 +12,7 @@ except:
     sys.exit(1)
 
 
-def f(operation):
+def calculate(operation):
     match operation:
         case 1:
             try:
@@ -69,4 +69,4 @@ def f(operation):
             logging.info(f"Wynik to {round(first_num / second_num, 2)}")
 
 
-f(operation)
+calculate(operation)
